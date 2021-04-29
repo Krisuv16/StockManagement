@@ -1,0 +1,47 @@
+﻿@model IEnumerable<StockManagement.Models.PurchaseModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PurchaseDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PurchaseDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PurchaseDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PurchaseDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PurchaseID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PurchaseID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PurchaseID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

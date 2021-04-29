@@ -1,0 +1,60 @@
+﻿@model StockManagement.Models.SalesDetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>SalesDetailsModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Manufacturedate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Manufacturedate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Expirydate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Expirydate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SID.SalesModedID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PID.PurchaseDescription)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CID.CustomerAddress)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.SalesDetailsID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
